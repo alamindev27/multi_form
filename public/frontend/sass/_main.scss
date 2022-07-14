@@ -1,0 +1,111 @@
+@use 'variables' as *;
+
+// Multi Step Form
+.multi-step-form-wrapper {
+    background-color: #b2bec3;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    position: relative;
+    padding-top: 70px;
+}
+
+.form-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $theme-color;
+    padding: 5px 35px;
+    color: #fff;
+    font-weight: normal;
+}
+
+.form-badge::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 15px solid $theme-color;
+    border-right: 15px solid transparent;
+}
+
+.multi-step-form-wrapper form {
+    background-color: #fdcb6e;
+    padding: 15px;
+    border: 1px solid lightgray;
+}
+
+.multi-step-form-wrapper .form-progress {
+    margin-bottom: 20px;
+}
+
+.multi-step-form-wrapper .form-progress p {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.multi-step-form-wrapper .form-progress .progress {
+    border-radius: 50px;
+    background-color: #333c4e;
+    height: 20px;
+}
+
+.multi-step-form-wrapper .form-progress .progress-bar {
+    background-color: $theme-color;
+}
+
+.main-label {
+    font-weight: bold;
+}
+
+.multi-step-form-wrapper .custom-control.custom-radio {
+    margin-bottom: 10px;
+}
+
+.multi-step-form-wrapper .custom-control.custom-checkbox {
+    margin-bottom: 10px;
+}
+
+.form-step-title {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.form-step-title-helper {
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
+.multi-step-form-wrapper .form-control:focus {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    outline: none;
+    border: 1px solid lightgray;
+}
+
+input.invalid {
+    background-color: #ffdddd;
+}
+
+.tab {
+    display: none;
+}
+
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;  
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+
+.step.active {
+    opacity: 1;
+}
+
+.step.finish {
+    background-color: $theme-color;
+}
